@@ -11,9 +11,7 @@ build_histogram = st.checkbox('Construir un histograma')
 
 if build_histogram:  # si la casilla de verificación está seleccionada
 
-    # Lógica a ejecutar cuando se hace clic en el botón
     # Mensaje para mostrar en la aplicación
-    hist_button = st.button('Construir histograma')
     st.write('Construir un histograma para la columna odómetro')
     fig = go.Figure(data=[go.Histogram(x=car_data['odometer'])])
 
@@ -30,9 +28,7 @@ build_dispersion = st.checkbox('Construir un diagrama de dispersión')
 
 if build_dispersion:  # si la casilla de verificación está seleccionada
 
-    # Lógica a ejecutar cuando se hace clic en el botón
     # Mensaje para mostrar en la aplicación
-    disp_button = st.button('Construir diagrama de dispersión')
     st.write(
         'Creación de un diagrama de dispersión para las columnas odómetro vs precio')
     fig_d = go.Figure(data=[go.Scatter(x=car_data['odometer'],
